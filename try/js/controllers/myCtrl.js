@@ -23,6 +23,7 @@ app.controller('myCtrl', function ($scope, $http) {
 				$scope.msg = "Post Data Submitted Successfully!";
 				$scope.dataHere = response.data;
 				$scope.userid = response.data.body.userlist[0].userid;
+				fetch(response.data.body.userlist[0].userid);
 			}
 		}, 
 		function (response) {
@@ -32,4 +33,9 @@ app.controller('myCtrl', function ($scope, $http) {
 			$scope.headers = response.headers();
 		});
 	};
+	function fetch(userid){
+		$http.get("https://healthatm.in/api/User/getUserDetails/?authkey=temp&authsecret=temp&userid=" + userid)
+		.then(function(response){ $scope.details = response.data; });
+	}
 });
+
