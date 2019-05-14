@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/controllers/myCtrl.js"></script>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<!-- Bootstrap core CSS -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.1/css/mdb.min.css" rel="stylesheet">
+
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+
+	<div class="container">
+		<center>
+			<div>
+				<img style="width: 30%;height: auto;margin-top: 15px;" src="https://healthatm.in/images/partner/yolo/logonavbar_yolo.png">
+			</div>
+		</center>
+	</div>
+	
+		<div style="padding: 0% 20%;">
+		    <p class="h4 mb-4">Login</p>
+		    <!-- Name -->
+		    <input type="text" ng-model="phone"  class="form-control mb-4" placeholder="phone">
+
+		    <!-- Email -->
+		    <input type="password" ng-model="password" class="form-control mb-4" placeholder="password">
+
+		    <!-- Sign in button -->
+
+		    <button class="btn btn-info btn-block" ng-click="postdata(phone,password)" type="submit"> Sign in</button>
+	    </div>
+
+	    <p>return object : {{dataHere}}</p>
+	    <br>
+	    <p>return 0th userid : {{userid}}</p>
+	    
+	    <p>Output Message : {{msg}}</p>
+
+		<p>StatusCode: {{statusval}}</p>
+
+		<p>Status: {{statustext}}</p>
+
+		<p>Response Headers: {{headers}}</p>
+
+	<!-- <div ng-view></div> -->
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.1/js/mdb.min.js"></script>
+
+</body>
+</html>
