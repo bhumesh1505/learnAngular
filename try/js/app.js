@@ -7,6 +7,10 @@ app.config(function($routeProvider) {
    .when("/profile", {
         templateUrl : "views/profile.html",
     })
+   .when("/profile/:userid", {
+        templateUrl : "views/profile.html",
+        controller : "myCtrlProfile"
+   })
    .otherwise({
         redirectTo : "/",
     });
