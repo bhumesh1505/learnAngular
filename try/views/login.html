@@ -1,19 +1,32 @@
-<center>
-	<br>
-	<div style="width: 50%;">
-		<form class="text-center border border-light p-5">
-		    <p class="h4 mb-4">Login</p>
-		    <!-- Name -->
-		    <input type="text" ng-model="phone"  class="form-control mb-4" placeholder="phone">
+<br>
+<div style="width: 50%;margin-left: 25%;">
+    <p class="h4 mb-4">Login</p>
+    <!-- Name -->
+    <input type="text" ng-model="phone"  class="form-control mb-4" placeholder="phone">
 
-		    <!-- Email -->
-		    <input type="password" ng-model="password" class="form-control mb-4" placeholder="password">
+    <!-- Email -->
+    <input type="password" ng-model="password" class="form-control mb-4" placeholder="password">
 
-		    <!-- Sign in button -->
+    <!-- Sign in button -->
 
-		    <button class="btn btn-info btn-block" ng-click="postdata(phone,password)" type="submit"> Sign in</button>
-		</form>
-	</div>
-
+    <button class="btn btn-info btn-block" ng-click="postdata(phone,password)" type="submit"> Sign in</button>
 	
-</center>
+	<br /> 
+	<br />
+	<br />
+	
+	<div>
+	    <p>return object : {{dataHere}}</p>
+	    <br>
+	    <p>return 0th userid : {{userid}}</p>
+	    
+	    <p>Output Message : {{msg}}</p>
+
+		<p>StatusCode: {{statusval}}</p>
+
+		<p>Status: {{statustext}}</p>
+
+		<p>Response Headers: {{headers}}</p>
+	</div>
+</div>
+
