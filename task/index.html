@@ -13,6 +13,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.1/css/mdb.min.css" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="style.css">
+    <style type="text/css">
+      #msgContainer{
+        border: 2px solid black;
+        padding: 10px;
+      }
+    </style>
   </head>
   <body>
     <h2>Training the system</h2>
@@ -31,16 +37,17 @@
     </div>
     <br>
     <br>
-    <div style="font-size: 25px;">Read the text</div>
-    <div class="row">
-      <div id="msg" style="font-size: 25px;visibility: hidden;" class="col-sm-6 col-md-6 col-lg-6">
-        CAPTURE
+    <center>
+      <div style="font-size: 25px;">Read the text</div>
+      <div class="row" id="msgContainer">
+        <div id="msg" style="font-size: 25px;visibility: hidden;" class="col-sm-6 col-md-6 col-lg-6">
+          CAPTURE
+        </div>
+        <div id="countDown" style="font-size: 20px;visibility: hidden;" class="col-sm-6 col-md-6 col-lg-6">
+          COUNT DOWN  
+        </div>
       </div>
-      <div id="countDown" style="font-size: 20px;visibility: hidden;" class="col-sm-6 col-md-6 col-lg-6">
-        COUNT DOWN  
-      </div>
-    </div>
-    
+    </center>
     <div id="controls">
   	 <button onclick="startRecordingNow()">Record</button>
      <button onclick="stopRecordingNow()">STOP</button>

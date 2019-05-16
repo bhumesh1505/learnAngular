@@ -25,11 +25,24 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             //template:'<h1>MY contacts</h1>'     // String HTML content, or function that returns an HTML string
             templateProvider: function ($timeout) {
                 return $timeout(function () {
-                  return '<h1>visibled after 2 seconds</h1>'
-                }, 2000);
+                  return '<h1>visibled after 1 seconds</h1>'
+                }, 0);
+            }
+        })/*
+        .state('contacts', {
+            url: "/contacts",
+            params: {
+                param1: null
+            },
+            templateUrl: 'views/contacts.html'
+        })*/
+        .state('controller', {
+            url:'/controller',
+            template: '<h1>{{title}}</h1>',
+            controller: function($scope){
+              $scope.title = 'My controller';
             }
         })
-
         ;
 
 });

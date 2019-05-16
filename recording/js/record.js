@@ -3,15 +3,17 @@ URL = window.URL || window.webkitURL;
 var gumStream;            //stream from getUserMedia()
 var rec;              //Recorder.js object
 var queue = new Queue();
-//var myVar2 = setInterval(startRecording, 3000);
 var interval1;  
 var interval2;
 var count;
-
+/*
+var colorIndex = 0;
+var color = ['red','green','blue'];
+*/
   function startRecordingNow()
   {
       count = 2000;
-      interval1 = setInterval(startRecording, 2000);      
+      interval1 = setInterval(startRecording, 2500);      
       interval2 = setInterval(c, 100);  
   }
   function stopRecordingNow()
@@ -25,6 +27,10 @@ var count;
   function c(val){
       document.getElementById("countDown").innerHTML = count/100;
       count = count - 100;
+      if(count < 0)
+      {
+        count = 0;
+      }
   }
 
   function downloadSkip()
@@ -79,7 +85,11 @@ var count;
     document.getElementById("countDown").style.visibility = "visible";
 
     document.getElementById("msg").innerHTML = msg[index];
-
+    
+    /*document.getElementById("msg").style.color = color[colorIndex];
+    colorIndex = (colorIndex+1) % 3;
+    */
+    
     var constraints = { audio: true, video:false }
 
     navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {   
@@ -148,6 +158,9 @@ function stopRecording() {
   //create the wav blob and pass it on to createDownloadLink
   rec.exportWAV(createDownloadLink);
   gumStream = "";
+
+  document.getElementById("msg").style.visibility = "hidden";
+  document.getElementById("countDown").style.visibility = "hidden";
 }
 
 function createDownloadLink(blob) {
