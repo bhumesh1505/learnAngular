@@ -4,8 +4,11 @@ var gumStream;            //stream from getUserMedia()
 var rec;              //Recorder.js object
 var queue = new Queue();
 //var myVar2 = setInterval(startRecording, 3000);
-
-  var myVar2 = setInterval(startRecording, 2000);
+  
+  function startRecordingNow()
+  {
+      var myVar2 = setInterval(startRecording, 2000);    
+  }
   var index = 0;
   var count = 2000;
 
@@ -20,12 +23,11 @@ var queue = new Queue();
   function downloadSkip()
   {
     var x = document.getElementsByClassName("skip");
-    /*var p;
+    var p;
     for(p=0;p<x.length;p++)
     {
       x[p].click();
-    }*/
-    x[0].click();
+    }
   }
   
   function downloadStart()
@@ -155,17 +157,21 @@ function createDownloadLink(blob) {
   if(i == 0)
   {
     filename = "START";
-    link.class = "start";
+    //link.class = "start";
+
+    link.setAttribute('class', 'start');
   }
   else if(i == 1)
   {
     filename = "SKIP";
-    link.class = "skip";
+      //link.class = "skip";
+    link.setAttribute('class', 'skip');
   }
   else
   {
     filename = "CAPTURE";
-    link.class = "capture";
+      //link.class = "capture";
+    link.setAttribute('class', 'capture');
   }
   //name of .wav file to use during upload and download (without extendion)
   filename += new Date().toISOString();
