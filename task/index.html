@@ -17,7 +17,20 @@
   <body>
     <h2>Training the system</h2>
     <br>
-
+    <br>
+    <div class="row">
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <button onclick="downloadSkip()">ALL SKIP</button>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <button onclick="downloadCapture()">ALL CAPTURE</button>        
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <button onclick="downloadStart()">ALL START</button>
+      </div>
+    </div>
+    <br>
+    <br>
     <div style="font-size: 25px;">Read the text</div>
     <div class="row">
       <div id="msg" style="font-size: 25px;visibility: hidden;" class="col-sm-6 col-md-6 col-lg-6">
@@ -46,6 +59,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.1/js/mdb.min.js"></script>    
+
     <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
     <script src="js/Queue.js"></script>

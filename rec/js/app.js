@@ -1,3 +1,26 @@
+//code.iamkate.com
+function Queue()
+{
+	var a=[],b=0;
+	this.getLength=function()
+	{
+		return a.length-b
+	};
+	this.isEmpty=function()
+	{return 0==a.length};
+	this.enqueue=function(b){a.push(b)};
+	this.dequeue=function()
+	{
+		if(0!=a.length)
+		{
+			var c=a[b];2*++b>=a.length&&(a=a.slice(b),b=0);return c
+		}
+	};
+	this.peek=function()
+	{
+		return 0<a.length?a[b]:void 0
+	}
+};
 URL = window.URL || window.webkitURL;
 
 var gumStream;            //stream from getUserMedia()
@@ -10,7 +33,6 @@ var queue = new Queue();
   var count = 2000;
 
   var myVar3 = setInterval(c, 100);  
-
   function c(val){
       document.getElementById("countDown").innerHTML = count/100;
 
@@ -102,7 +124,8 @@ var queue = new Queue();
     rec.record()
 
   });
-  setTimeout(stopRecording, 2000);
+
+  var myVar = setInterval(stopRecording, 2000);
 }
 
 function pauseRecording(){
@@ -138,7 +161,7 @@ function stopRecording() {
 
   //create the wav blob and pass it on to createDownloadLink
   rec.exportWAV(createDownloadLink);
-  gumStream = "";
+  //gumStream = "";
 }
 
 function createDownloadLink(blob) {

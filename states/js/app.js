@@ -1,7 +1,7 @@
 var routerApp = angular.module('routerApp', ['ui.router']);
 function action()
 {
-    document.getElementById("alink").click() ;
+    document.getElementByClasses("alink").click();
 }
 routerApp.config(function($stateProvider, $urlRouterProvider) {
 

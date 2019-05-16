@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Simple Recorder.js demo with record, stop and pause</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h2>Training the system</h2>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <button onclick="downloadSkip()">ALL SKIP</button>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <button onclick="downloadCapture()">ALL CAPTURE</button>        
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <button onclick="downloadStart()">ALL START</button>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div style="font-size: 25px;">Read the text</div>
+    <div class="row">
+      <div id="msg" style="font-size: 25px;visibility: hidden;" class="col-sm-6 col-md-6 col-lg-6">
+        CAPTURE
+      </div>
+      <div id="countDown" style="font-size: 20px;visibility: hidden;" class="col-sm-6 col-md-6 col-lg-6">
+        COUNT DOWN  
+      </div>
+    </div>
+    
+    <div id="controls">
+     <button onclick="startRecording()">Record</button>
+<!--     <button id="pauseButton" disabled>Pause</button>
+     <button id="stopButton" disabled>Stop</button> -->
+    </div>
+    
+    <div id="formats">Format: start recording to see sample rate</div>
+    <h3>Recordings</h3>
+    <ol id="recordingsList"></ol>
+    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+  	<script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+  	<script src="js/app.js"></script>
+    
+  </body>
+</html>
