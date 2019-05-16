@@ -4,19 +4,26 @@ var gumStream;            //stream from getUserMedia()
 var rec;              //Recorder.js object
 var queue = new Queue();
 //var myVar2 = setInterval(startRecording, 3000);
-  
+var interval1;  
+var interval2;
+var count;
+
   function startRecordingNow()
   {
-      var myVar2 = setInterval(startRecording, 2000);    
+      count = 2000;
+      interval1 = setInterval(startRecording, 2000);      
+      interval2 = setInterval(c, 100);  
   }
-  var index = 0;
-  var count = 2000;
+  function stopRecordingNow()
+  {
+      clearInterval(interval1);
+      clearInterval(interval2);      
+  }
 
-  var myVar3 = setInterval(c, 100);  
+  var index = 0;
 
   function c(val){
       document.getElementById("countDown").innerHTML = count/100;
-
       count = count - 100;
   }
 
